@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<UserControl
+    x:Class="TrayNotes_WinUI.NoteEditor"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid x:Name="RootGrid">
+        <Border x:Name="PaperOverlay" IsHitTestVisible="False" />
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="36" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="36" />
+            </Grid.RowDefinitions>
+
+            <Grid
+                x:Name="TitleBar"
+                Grid.Row="0"
+                Background="Transparent"
+                Padding="12,0,4,0">
+                <TextBlock
+                    x:Name="TitleLabel"
+                    Text="Sticky"
+                    VerticalAlignment="Center"
+                    FontWeight="SemiBold"
+                    FontSize="13"
+                    IsHitTestVisible="False" />
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Spacing="2">
+                    <Button
+                        x:Name="PopOutBtn"
+                        Content="⧉"
+                        Width="30"
+                        Height="28"
+                        Padding="0"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        Visibility="Collapsed"
+                        Click="PopOutBtn_Click"
+                        ToolTipService.ToolTip="Open in separate window" />
+                    <Button
+                        x:Name="ModeBtn"
+                        Content="Text"
+                        Height="28"
+                        Padding="8,0"
+                        Background="Transparent"
+                        Click="ModeBtn_Click"
+                        ToolTipService.ToolTip="Toggle text / checklist" />
+                    <Button
+                        x:Name="CloseBtn"
+                        Content="✕"
+                        Width="30"
+                        Height="28"
+                        Padding="0"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        Click="CloseBtn_Click"
+                        ToolTipService.ToolTip="Hide note" />
+                </StackPanel>
+            </Grid>
+
+            <Grid x:Name="EditorHost" Grid.Row="1">
+                <RichEditBox
+                    x:Name="BodyEdit"
+                    Margin="12,2,12,2"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    AcceptsReturn="True"
+                    TextWrapping="Wrap"
+                    FontSize="15"
+                    TextChanged="BodyEdit_TextChanged"
+                    PreviewKeyDown="BodyEdit_PreviewKeyDown"
+                    LostFocus="Editor_LostFocus" />
+
+                <ScrollViewer
+                    x:Name="CheckScroll"
+                    Margin="8,0,8,0"
+                    Visibility="Collapsed"
+                    VerticalScrollBarVisibility="Auto"
+                    HorizontalScrollBarVisibility="Disabled">
+                    <StackPanel x:Name="CheckList" Spacing="0" />
+                </ScrollViewer>
+
+                <Border
+                    x:Name="ExternalEditOverlay"
+                    Visibility="Collapsed"
+                    Background="#88FFFFFF">
+                    <StackPanel
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Spacing="8"
+                        Padding="16">
+                        <TextBlock
+                            Text="Editing in a separate window"
+                            HorizontalAlignment="Center"
+                            FontWeight="SemiBold"
+                            TextWrapping="Wrap"
+                            TextAlignment="Center" />
+                        <Button
+                            Content="Focus window"
+                            Click="FocusWindowBtn_Click"
+                            HorizontalAlignment="Center" />
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+            <StackPanel
+                x:Name="ColorDots"
+                Grid.Row="2"
+                Orientation="Horizontal"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Spacing="2" />
+        </Grid>
+    </Grid>
+</UserControl>

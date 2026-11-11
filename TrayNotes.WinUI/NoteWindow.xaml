@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Window
+    x:Class="TrayNotes_WinUI.NoteWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TrayNotes_WinUI"
+    Title="Sticky">
+
+    <Grid x:Name="RootGrid">
+        <local:NoteEditor x:Name="Editor" />
+    </Grid>
+</Window>

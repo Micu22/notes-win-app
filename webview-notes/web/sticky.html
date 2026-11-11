@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sticky</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="sticky">
+  <header class="sticky-chrome">
+    <div id="title-label" class="title-label">Sticky</div>
+    <div class="chrome-actions">
+      <button type="button" id="btn-bold" class="btn ghost" title="Bold (Ctrl+B)">B</button>
+      <button type="button" id="btn-check" class="btn ghost" title="Toggle checklist">☑</button>
+      <span id="save-state" class="save-state">Saved</span>
+      <button type="button" id="btn-min" class="win-btn" title="Minimize" aria-label="Minimize">
+        <span class="glyph bar"></span>
+      </button>
+      <button type="button" id="btn-close" class="win-btn" title="Close" aria-label="Close">
+        <span class="glyph x"></span>
+      </button>
+    </div>
+  </header>
+
+  <textarea id="text-editor" class="text-editor" spellcheck="true" hidden></textarea>
+
+  <div id="check-editor" class="check-editor" hidden>
+    <div id="check-rows"></div>
+    <button type="button" id="btn-add-row" class="btn ghost add-row">+ Add item</button>
+  </div>
+
+  <script src="sticky.js"></script>
+</body>
+</html>

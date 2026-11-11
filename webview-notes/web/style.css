@@ -1,0 +1,341 @@
+:root {
+  --paper: #ffec96;
+  --title: #ffd64a;
+  --ink: #281e08;
+  --muted: #5c400c;
+  --line: #e6be46;
+  --side: #f7f1df;
+  --side-border: #e4d7a8;
+  --accent: #c48a0a;
+  --danger: #a33;
+  --chrome-border: #785a14;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  color: var(--ink);
+  background: var(--side);
+  overflow: hidden;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+/* —— Browser (list) —— */
+body.browser {
+  display: block;
+  background: #fffaf0;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--side-border);
+  background: #fffaf0;
+  min-height: 0;
+  height: 100%;
+}
+
+.sidebar.full {
+  border-right: 0;
+  width: 100%;
+}
+
+.sidebar-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 14px 12px 8px;
+}
+
+.sidebar-head h1 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 4px 12px 10px;
+}
+
+.chip {
+  border: 1px solid var(--side-border);
+  background: #fff;
+  color: var(--muted);
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 0.78rem;
+}
+
+.chip.active {
+  background: var(--title);
+  border-color: var(--line);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.note-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 8px 8px;
+  overflow: auto;
+  flex: 1;
+  min-height: 0;
+}
+
+.note-list li {
+  padding: 10px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.note-list li:hover { background: #fff3c8; }
+
+.note-list li.active {
+  background: var(--paper);
+  border-color: var(--line);
+}
+
+.note-list .id {
+  display: block;
+  font-weight: 600;
+  font-size: 0.86rem;
+}
+
+.note-list .meta {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.sidebar-foot {
+  padding: 10px 12px 14px;
+  border-top: 1px solid var(--side-border);
+}
+
+.sidebar-foot.row {
+  display: flex;
+  gap: 8px;
+}
+
+.sidebar-foot.row .btn {
+  flex: 1;
+  width: auto;
+}
+
+.btn {
+  border: 1px solid var(--side-border);
+  background: #fff;
+  color: var(--ink);
+  border-radius: 8px;
+  padding: 7px 12px;
+  font-size: 0.86rem;
+}
+
+.btn.primary {
+  background: var(--title);
+  border-color: var(--line);
+  font-weight: 650;
+}
+
+.btn.danger {
+  background: #fff;
+  border-color: #e0b0b0;
+  color: var(--danger);
+}
+
+.btn.danger:disabled,
+.btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.btn.ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--muted);
+  padding: 4px 8px;
+}
+
+.btn.ghost:hover { background: rgba(0, 0, 0, 0.05); }
+
+#btn-bold {
+  font-weight: 800;
+  font-family: Georgia, serif;
+}
+
+/* —— Sticky note window —— */
+body.sticky {
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+
+.sticky-chrome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  height: 30px;
+  padding: 0 8px 0 10px;
+  background: var(--title);
+  border-bottom: 1px solid var(--line);
+  flex-shrink: 0;
+  user-select: none;
+  cursor: default;
+}
+
+/* Right side stays interactive for the circle buttons */
+.chrome-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  min-width: 72px;
+  justify-content: flex-end;
+}
+
+.title-label {
+  font-weight: 650;
+  font-size: 0.85rem;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+  flex: 1;
+}
+
+.save-state {
+  font-size: 0.7rem;
+  color: var(--muted);
+  min-width: 3.2rem;
+  text-align: right;
+}
+
+.win-btn {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--chrome-border);
+  background: transparent;
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.win-btn .glyph {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.win-btn:hover {
+  background: rgba(120, 90, 20, 0.12);
+}
+
+.win-btn:hover .glyph {
+  opacity: 1;
+}
+
+.win-btn .glyph.bar {
+  width: 8px;
+  height: 1.5px;
+  background: #5a320a;
+  border-radius: 1px;
+}
+
+.win-btn .glyph.x {
+  width: 8px;
+  height: 8px;
+  position: relative;
+}
+
+.win-btn .glyph.x::before,
+.win-btn .glyph.x::after {
+  content: "";
+  position: absolute;
+  left: 3.5px;
+  top: 0;
+  width: 1.5px;
+  height: 8px;
+  background: #5a320a;
+  border-radius: 1px;
+}
+
+.win-btn .glyph.x::before { transform: rotate(45deg); }
+.win-btn .glyph.x::after { transform: rotate(-45deg); }
+
+.text-editor {
+  flex: 1;
+  width: 100%;
+  border: 0;
+  resize: none;
+  outline: none;
+  padding: 12px 14px;
+  background: transparent;
+  color: var(--ink);
+  font: 16px/1.45 "Segoe UI", system-ui, sans-serif;
+  min-height: 0;
+}
+
+.check-editor {
+  flex: 1;
+  overflow: auto;
+  padding: 8px 10px 12px;
+  min-height: 0;
+}
+
+.check-row {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.check-row input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+}
+
+.check-row input[type="text"] {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--ink);
+  font: 16px/1.4 "Segoe UI", system-ui, sans-serif;
+  padding: 6px 4px;
+  border-bottom: 1px solid transparent;
+}
+
+.check-row input[type="text"]:focus {
+  border-bottom-color: var(--line);
+}
+
+.check-row.done input[type="text"] {
+  text-decoration: line-through;
+  opacity: 0.65;
+}
+
+.add-row {
+  margin-top: 8px;
+  margin-left: 28px;
+}

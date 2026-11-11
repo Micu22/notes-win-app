@@ -1,0 +1,34 @@
+<!-- traynotes x=1746 y=537 w=712 h=628 hidden=0 mode=check color=4 -->
+- [x] vdijvosv
+- [x] fvfdvvfvdsfasdfffdsfdsffdsfdsf
+- [ ] dsfdsfojasdfdfsdfsdjosjfdiod
+- [x] cdcdcscdcdsadfsfadfdsafdsafdff
+- [ ] dsfadf
+- [ ] asfdsf
+- [ ] ffjidasofiadsofpj jfasidjp  
+- [x] cdscds dfj asjifo diofjiodjioad fdij fioj dsioafj iojf djfij\fdfs\
+- [ ] dfdsfdsafdsfa
+- [ ] dsfadfsafdfssfdjijoj jiso jiodsj jds ioj jfdos asif jdi jafio djfo ajidsfjido jifo adsjiodfjio
+- [ ] 
+- [ ] dfsfsd
+- [ ] dfadsfodsfdsjofads
+- [x] fdsafdsfasfdsjfioja
+- [x] fdsioasfiiodsjfosda
+- [x] fdsijfioasdfjaiodsfj
+- [x] 
+- [ ] mklmklk
+- [ ] mklmklmkldafo jiojds ifjoda ifjojoid jifjods ajifjo iodsjifoji ofjid ojifo ajidofjo sjif oia
+- [ ] 
+- [ ] fdsfssdfsjfisfdjsioffdsjiofis
+- [x] fdsajiofmmjiodsjafa
+- [x] fdisofjodj
+- [ ] fjdisofjisodfi
+- [ ] mlmlkkdfsfadfa
+- [ ] klmk
+- [ ] njnjknjnjk
+- [ ] fdfas
+- [x] dfsafd
+- [x] fdadsafj dofodsajfods fiogjfiojg jgiofdj giodf sjiogj fjosgofgj sjgof gjdf gjf jg fd jgisfi jgofjogjfjj ijgojsfd gjjdfios
+- [x] nininmml n n fdsafdsfadsfdsfsdfdsfsadjfiodjif d foa jf 
+- [x] dvfvdmvdffdsjfoffdjsiofajid
+- [x] dfvvdvfv

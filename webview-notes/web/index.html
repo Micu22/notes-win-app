@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>All notes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="browser">
+  <aside class="sidebar full">
+    <header class="sidebar-head">
+      <h1>Notes</h1>
+      <button type="button" id="btn-new" class="btn primary" title="New note (Ctrl+N)">New</button>
+    </header>
+    <div id="filters" class="filters"></div>
+    <ul id="note-list" class="note-list"></ul>
+    <footer class="sidebar-foot row">
+      <button type="button" id="btn-open" class="btn" disabled>Show</button>
+      <button type="button" id="btn-delete" class="btn danger" disabled>Delete</button>
+    </footer>
+  </aside>
+  <script src="browser.js"></script>
+</body>
+</html>

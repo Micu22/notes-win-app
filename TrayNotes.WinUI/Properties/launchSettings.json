@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TrayNotes.WinUI (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "TrayNotes.WinUI (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
